@@ -1,0 +1,52 @@
+
+<div class="sub-menu" >
+</div>
+<div class="container">
+    <div style="padding:30px; margin-top: 30px" ng-controller="copySalesTemplatesCtrl">       
+                
+        <form name="copySalesTemplates" ng-submit="saveSalesTemplate(add)">
+
+            <button type="submit"  class="btn btn-primary">Save</button>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-9">
+                        <label></label>
+                        <input class="form-control" id="inputsm" type="text" ng-model="add.name" placeholder="Name">
+                    </div>
+                    <div class="col-md-3">
+                        <label></label>
+                        <select class="form-control" id="sel1" ng-model="add.status">
+                            <option>inactive</option>
+                            <option>active</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-9">
+                        <label></label>
+                        <input class="form-control" id="inputsm" type="text" ng-model="add.subject" placeholder="Subject"> 
+                    </div>
+                    <div class="col-md-3">
+                        <label></label>
+                            <select  ng-model="data.model" class="form-control">
+                                <option ng-repeat="x in tempObject" value="{{x}}">
+                                    {{x.title}}
+                                </option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea ng-model="add.email_message" data-ck-editor></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

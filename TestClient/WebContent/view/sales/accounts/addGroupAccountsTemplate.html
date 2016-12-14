@@ -1,0 +1,28 @@
+  <div id="addto_group">
+  	<div class="">
+  		<!-- Modal content-->
+  		<div class="">
+  			<div class="modal-header pop-header">
+  				<button type="button" class="close" data-dismiss="modal" ng-click="cancel()">&times;</button>
+  				<h4 class="modal-title">Add To Group</h4>
+  			</div>
+  			<div class="modal-body">
+  				<div class="form-group">							
+  					<h4>Select one or more groups</h4> 	
+
+  					<ui-select ng-model="person.selected" multiple theme="selectize" title="Choose a person">
+  						<ui-select-match placeholder="Click here to start...">{{$item.name}}</ui-select-match>
+  						<ui-select-choices repeat="item in people | filter: $select.search">
+  							<div ng-bind-html="item.name | highlight: $select.search"></div>
+  						</ui-select-choices>
+  					</ui-select>
+
+  				</div>
+
+  				<div class="text-left">
+  				<input name="" value="Apply" onclick="saveSetupView()" class="btn_bg1 small_btn" type="button"> <label ng-show="addToGroupHereFlag">Click <a style="color:blue;" ng-click="addToGroupHere()">here</a> to add a new group.</label><input type="text" ng-show="!addToGroupHereFlag"><input type="button" value="Save" style="margin-left: 2px;" class="btn_bg1" ng-show="!addToGroupHereFlag"><input type="button" value="Cancel" style="margin-left: 2px" class="btn_bg1" ng-click="addToGroupHereFlagCancel()" ng-show="!addToGroupHereFlag">
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  </div>

@@ -1,0 +1,12 @@
+<div class="blue-top-header submenu_area" style="margin-top:30px;" ng-app="reports" ng-controller="reportMenuCtrl">
+    <div class="container-fluid">
+        <ul class="sublist float-left" id="navigationFields">
+            <li ng-repeat="tab in reportTabs" ng-class="{
+                                active:isActiveTab(tab.url)
+                            }" ng-click="onClickTab(tab)">
+                <a>  {{tab.title}} </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container" ng-include="reportCurrentTab"></div>
+</div>

@@ -1,0 +1,14 @@
+<div class="header-bottom" ng-controller="homeCtrl">
+    <div id="ts_tabmenu">
+        <ul  class="ui-sortable">
+            <li ng-repeat="tab in tabs" ng-class="{active:isActiveTab(tab.url)}"> 
+                <a  ng-click="onClickTab(tab)" href="javascript:void(0)">  {{tab.title}} </a>
+                <span class="close-tab" ng-click="removeTab($index)" >x</span>
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div ng-include="currentTab">
+        </div>
+    </div>    
+</div>

@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="col-md-12" style="margin-top: 20px;">
+        <div class="col-md-3">
+            <select class="form-control" ng-model="selectedValue">
+				<option value="td">Today</option>
+				<option value="yd">Yesterday</option>
+				<option value="tw">This Week</option>
+				<option value="tm">This Month</option>
+				<option value="tq">This Quarter</option>
+				<option value="ty">This Year</option>
+				<option value="lw">Last Week</option>
+				<option value="lm">Last Month</option>
+				<option value="lq">Last Quarter</option>
+				<option value="ly">Last Year</option>
+				<option value="cust">Custom</option>
+			</select>
+        </div>
+        <div ng-show="selectedValue=='cust'">
+            <div class="col-md-2">
+                <input type="text" class="form-control" datetime-picker="MM/dd/yyyy" ng-click="openCalendar($event, 'picker3')" ng-model="picker3.date"
+                    is-open="picker3.open" />
+
+            </div>
+            <div class="col-md-2">
+                <input type="text" class="form-control" datetime-picker="MM/dd/yyyy" ng-click="openCalendar($event, 'picker4')" ng-model="picker4.date"
+                    is-open="picker4.open" />
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" id="salesRep">
+				<option value="All">All</option>
+				<option value="Ravi Teja Villa">Ravi Teja Villa</option>
+			</select>
+        </div>
+        <div class="col-md-2">
+            <img title="Refresh" alt="Refresh" src="images/icon_refresh_g.png" action="refresh" style=" margin: 2px 10px;">
+            <img title="Print" alt="Print" src="images/icon_print.png" action="printMe" style="margin: 2px 10px;">
+        </div>
+    </div>
+</div>

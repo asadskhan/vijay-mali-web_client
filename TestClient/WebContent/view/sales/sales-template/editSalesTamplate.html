@@ -1,0 +1,137 @@
+﻿<div class="sub-menu">
+</div>
+<div class="container">
+    <div style="padding:30px; margin-top: 30px" ng-controller="editSalesTemplatesCtrl">
+        {{copySalesTemplate}}
+        <form name="createSalesTemplates" ng-submit="saveSalesTemplate(add)" ng-init="hideButton=true">
+
+            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-primary" ng-show="hideButton" ng-click="copySaleTemplate()">Copy</button>
+            <button type="button" ng-click="test()" ng-show="hideButton" class="btn btn-primary">Test</button>
+            <button type="button" class="btn btn-primary" ng-show="hideButton">Delete</button>
+            <button type="button" class="btn btn-primary" ng-show="hideButton">Preview</button>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-9">
+                        <label></label>
+                        <input class="form-control" id="inputsm" type="text" ng-model="add.name" placeholder="Name">
+                    </div>
+                    <div class="col-md-3">
+                        <label></label>
+                        <select class="form-control" id="sel1" ng-model="add.status">
+                            <option>inactive</option>
+                            <option>active</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-9">
+                        <label></label>
+                        <!--<input class="form-control" id="inputsm" type="text" ng-model="add.subject" placeholder="Subject">-->
+                        <input class="form-control"  placeholder="subject" type="text" id="myText" value="sales ">
+                    </div>
+                    <div class="col-md-3">
+                        <label></label>
+                        <select class="form-control" id="sel1" ng-model="selectedData" ng-change="addMailMarge()">
+                            <option ng-repeat="mailMarge in mailMarges">{{mailMarge}}</option>
+
+                        </select>
+
+                        <!--<select ng-model="data.model" class="form-control">
+                                <option ng-repeat="x in tempObject" value="{{x}}">
+                                    {{x.title}}
+                                </option>
+                            </select>-->
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea ng-model="add.email_message" data-ck-editor></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="sub-menu" >
+</div>
+<div class="container">
+    <div style="padding:30px; margin-top: 30px" ng-controller="editSalesTemplatesCtrl">       
+        
+        <div>
+	        <button type="button" class="btn btn-primary">Save</button>
+	        <button type="button" class="btn btn-primary">Copy</button>
+	        <button type="button" class="btn btn-primary">Test</button>
+	        <button type="button" class="btn btn-primary">Delete</button>
+	        <button type="button" class="btn btn-primary">Preview</button>
+	    </div>
+
+        <form name="createSalesTemplates" ng-submit="saveSalesTemplate(add)"> -->
+
+<!--  <button type="submit"  class="btn btn-primary">Add</button>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-9">
+                        <label></label>
+                        <input class="form-control" id="inputsm" type="text" ng-model="add.name" placeholder="Name">
+                    </div>
+                    <div class="col-md-3">
+                        <label></label>
+                        <select class="form-control" id="sel1" ng-model="add.status">
+                            <option>inactive</option>
+                            <option>active</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-9">
+                        <label></label>
+                        <input class="form-control" id="inputsm" type="text" ng-model="add.subject" placeholder="Subject"> 
+                    </div>
+                    <div class="col-md-3">
+                        <label></label>
+                            <select  ng-model="data.model" class="form-control">
+                                <option ng-repeat="x in tempObject" value="{{x}}">
+                                    {{x.title}}
+                                </option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12">
+                        <textarea ng-model="add.email_message" data-ck-editor></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

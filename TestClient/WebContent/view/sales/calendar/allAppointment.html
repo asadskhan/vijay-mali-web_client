@@ -1,0 +1,200 @@
+﻿<div ng-controller="allAppointmentCtrl">
+    <div class="sub-menu">
+        <div class="container-large">
+            <!-- <div class="dropdown-header">
+               <span class="title" title="All">All</span>
+               <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img">
+               </div> -->
+
+            <div class="btn-group" uib-dropdown>
+                <div class="btn btn-link" uib-dropdown-toggle>
+                    <span class="title" title="All">All</span>
+                    <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img">
+                    <img src="images/submenu_arrow.png" class="arrow">
+                </div>
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li class="field ui-tab">
+                        <table cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" style="border-right: 1px solid lightgray;">
+                                        <div class="drop-menu-item-optgroup" id="My_Filters">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div style="float:left;">
+                                                                <a href="javascript:void(0)" onclick="javascript:openLink(this);">My Filters</a>&nbsp;&nbsp;
+                                                                <button class="addIcon" onclick="addFilter()">Add</button>
+                                                            </div>
+                                                            <div class="gmail-buttons" style="float:right;">
+                                                                <a id="My_FiltersPrevious" href="javascript:void(0)" onclick="javascript:previous(My_FiltersTable,My_FiltersPrevious,My_FiltersNext);" style="text-decoration: none; outline: none; padding-right: 5px; display: none;">
+                                                                    <div class="gmail-img-button" title="Previous"><img src="images/arrow_left_gray.png" align="absmiddle" style="border: 0"></div>
+                                                                </a>
+                                                                <a id="My_FiltersNext" href="javascript:void(0)" onclick="javascript:next(My_FiltersTable,My_FiltersPrevious,My_FiltersNext);" style="text-decoration: none; outline: none; padding-right: 5px; display: none;">
+                                                                    <div class="gmail-img-button" title="Next"><img src="images/arrow_right_gray.png" align="absmiddle" style="border: 0"></div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div style="overflow: hidden; margin-right: 10px; position: relative; width: 153px; height: 152px;">
+                                            <table id="My_FiltersTable" style="position:absolute; left:0;">
+                                                <tbody>
+                                                    <tr class="table-tr">
+                                                        <td id="1" valign="top">
+                                                            <div class="drop-menu-item selected" title="All" value="716" section="query" style="width: 115px;">All</div>
+                                                            <div class="drop-menu-item" title="Customers" value="473" section="query" style="width: 115px;">Customers</div>
+                                                            <div class="drop-menu-item" title="filter1" value="3674" section="filter" style="width: 115px;">filter1</div>
+                                                            <div class="drop-menu-item" title="Leads" value="469" section="query" style="width: 115px;">Leads</div>
+                                                            <div class="drop-menu-item" title="Recent Accounts" value="1056" section="query" style="width: 115px;">Recent Accounts</div>
+                                                            <div class="drop-menu-item" title="test" value="3539" section="filter" style="width: 115px;">test</div>
+                                                            <div class="drop-menu-item" title="Without Groups" value="1583" section="query" style="width: 115px;">Without Groups</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                    <td valign="top" style="border-right: 0px;">
+                                        <div class="drop-menu-item-optgroup" id="My_Groups">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div style="float:left;">
+                                                                <a href="javascript:void(0)" onclick="javascript:openLink(this);">My Groups</a>&nbsp;&nbsp;
+                                                                <button class="addIcon" onclick="addGroup()">Add</button>
+                                                            </div>
+                                                            <div class="gmail-buttons" style="float:right;">
+                                                                <a id="My_GroupsPrevious" href="javascript:void(0)" onclick="javascript:previous(My_GroupsTable,My_GroupsPrevious,My_GroupsNext);" style="text-decoration: none; outline: none; padding-right: 5px; display: none;">
+                                                                    <div class="gmail-img-button" title="Previous"><img src="images/arrow_left_gray.png" align="absmiddle" style="border: 0"></div>
+                                                                </a>
+                                                                <a id="My_GroupsNext" href="javascript:void(0)" onclick="javascript:next(My_GroupsTable,My_GroupsPrevious,My_GroupsNext);" style="text-decoration: none; outline: none; padding-right: 5px; display: none;">
+                                                                    <div class="gmail-img-button" title="Next"><img src="images/arrow_right_gray.png" align="absmiddle" style="border: 0"></div>
+                                                                </a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div style="overflow: hidden; margin-right: 10px; position: relative; width: 153px; height: 68px;">
+                                            <table id="My_GroupsTable" style="position:absolute; left:0;">
+                                                <tbody>
+                                                    <tr class="table-tr">
+                                                        <td id="1" valign="top">
+                                                            <div class="drop-menu-item" title="abcd" value="22396" section="group" style="width: 115px;" ng-repeat="data in accountData.data.group_by">{{data.label}}</div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Split button -->
+            <div class="btn-group" uib-dropdown>
+                <span class="title dropdown-img" uib-dropdown-toggle title="All" ng-init="groupSort= {label:'Lead Score'}">
+                    {{groupSort.label}}
+                    <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img">
+                </span>
+
+                <img src="images/submenu_arrow.png" class="arrow">
+                <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                    <li role="menuitem" ng-repeat="group in accountData.data.fields" ng-show="group.is_group_by">
+                        <a href="javascript:void(0)" ng-click="groupSelected(group)">
+                            {{group.label}}
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="btn-group" uib-dropdown>
+                <div class="btn btn-link bnt-title" uib-dropdown-toggle>
+                    All ({{accountData.data.fields.length}})
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-large">
+        <div class="recordHeader">
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 recordHeader-left pull-left">
+                <span class="add-icon" ng-click="createNewAppointment()">
+                    <img src="images/icon_add.png" />Add
+                </span>
+                <span class="refresh-icon" ng-click="refresh();">
+                    <img src="images/icon_refresh_g.png" />Refresh
+                </span>
+
+                <span class="customizeViewImg" ng-click="setupAppointmentTemplate();">
+                    <img src="images/icon_customize.png" />Setup
+                </span>
+
+                <div class="h-search" ng-init="columnSort= {label:'First Name'}">
+                    <div class="header-search">
+                        <span class="search-title">{{columnSort.label}}</span>
+                        <div class="input-group" id="adv-search">
+                            <div class="dropdown  dropdown-lg">
+                                <div class="btn-group" uib-dropdown>
+                                    <img src="images/img_down_arrow.png" class="dropIcon" align="absmiddle" uib-dropdown-toggle />
+                                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                                        <li ng-repeat="colname in accountData.data.fields" ng-show="colname.is_search">
+                                            <a href="javascript:void(0)" ng-click="colnameSelected(colname)">{{colname.label}}</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <input type="text" class="form-control" ng-model="searchText" placeholder="Type a keyword and press enter" />
+                            <div class="input-group-btn">
+                                <div class="btn-group" role="group">
+                                    <button type="button">
+                                        <img src="images/icon_magnifying.png">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="side-icon-pop" ng-show="singleSelect">
+            <ul>
+                <li><a ng-click="addNote()"><img src="images/icon_add_notes.png" /></a></li>
+                <li><a ng-click="convert()"><img src="images/icon_promote.png" /></a></li>
+                <li><a ng-click="addToGroup()"><img src="images/icon_add_to_group.png" /></a></li>
+                <li><a ng-click="workflow()"><img src="images/icon_applyWorkflow.png" /></a></li>
+                <li><a ng-click="shareWith()"><img src="images/icon_share.png" /></a></li>
+                <li><a ng-click="assign()"><img src="images/icon_assign_to.png" /></a></li>
+                <li><a ng-click="edit()"><img src="images/icon_edit.png" /></a></li>
+                <li><a ng-click="delete()"><img src="images/icon_delete.png" /></a></li>
+            </ul>
+        </div>-->
+
+
+        <div style="clear: both;padding: 20px 0;">
+            <div class="side-icon-pop" ng-show="singleSelect">
+                <ul>
+                    <li ng-show="!multipleSelect"><a ng-click="addNote()"><img src="images/icon_add_notes.png" /></a></li>
+                    <li><a ng-click="complete()"><img src="images/icon_complete.png" /></a></li>
+                    <li><a ng-click="forward()"><img src="images/icon_forward.png" /></a></li>
+                    <li><a ng-click="delete()"><img src="images/icon_delete.png" /></a></li>
+
+                </ul>
+            </div>
+            <div ui-if="gridOptions1.data.length>0" ui-grid="gridOptions1" class="grid" ui-grid-pagination ui-grid-selection ui-grid-resize-columns ui-grid-move-columns ui-grid-auto-resize ng-style="getTableHeight()"></div>
+        </div>
+    </div>
+
+
+</div>

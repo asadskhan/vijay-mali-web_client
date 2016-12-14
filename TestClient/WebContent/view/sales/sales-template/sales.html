@@ -1,0 +1,92 @@
+<div ng-app="salesTemplate" ng-controller="salesTemplatesCtrl">
+   <div class="sub-menu" >
+      <div class="container-large">
+       
+       <!-- Split button -->
+       <div class="btn-group" uib-dropdown>
+         <span class="title dropdown-img" uib-dropdown-toggle title="All" ng-init="groupSort= {label:'Company'}">
+               {{groupSort.label}}  
+                <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img" >
+         </span>
+        
+         <img src="images/submenu_arrow.png" class="arrow">
+         <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+           <li role="menuitem" ng-repeat="group in salesData.data.fields" ng-show="group.is_group_by">
+            <a href="javascript:void(0)" ng-click="groupSelected(group)">
+                  {{group.label}}
+            </a>
+           </li>
+           
+         </ul>
+       </div>
+
+         <div class="btn-group" uib-dropdown>
+            <div  class="btn btn-link bnt-title" uib-dropdown-toggle>
+               All ({{salesData.data.fields.length}}) 
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="container-large" >
+      <div class="recordHeader">
+         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 recordHeader-left pull-left">
+            <span class="add-icon" ng-class="{active:isActiveTab({ url:'view/sales/sales-template/addSalesTemplate.html'})}"   ng-click="onClickTab({ url:'view/sales/sales-template/addSalesTemplate.html'}); addTab({title: 'Create Sales Template', url: 'view/sales/sales-template/addSalesTemplate.html'} )">
+            <img src="images/icon_add.png" />Add
+            </span>
+            <span class="refresh-icon" ng-click="refresh();">
+            <img src="images/icon_refresh_g.png" />Refresh
+            </span>
+
+            <div class="h-search" ng-init="columnSort= {label:'Name'}" >
+               <div class="header-search">
+                  <span class="search-title">{{columnSort.label}}</span>
+                  <div class="input-group" id="adv-search">
+                     <div class="dropdown  dropdown-lg">
+                        <div class="btn-group" uib-dropdown>
+                           <img src="images/img_down_arrow.png" class="dropIcon" align="absmiddle" uib-dropdown-toggle />
+                           <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
+                              <li ng-repeat="colname in salesData.data.fields" ng-show="colname.is_search">
+                                 <a href="javascript:void(0)" ng-click="colnameSelected(colname)">{{colname.label}}</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+
+
+                      <input type="text" class="form-control"  ng-model="gridApi.grid.columns[index].filters[0].term"   placeholder="Type a keyword and press enter" />
+                     <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                           <button type="button">
+                           <img src="images/icon_magnifying.png">
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div style="clear: both;padding: 20px 0;">
+           <div class="side-icon-pop">
+                    <ul ng-show="singleSelect">
+                        <li ng-class="{active:isActiveTab({ url:'view/sales/sales-template/editSalesTamplate.html'})}" 
+                    ng-click="onClickTab({ url:'view/sales/sales-template/editSalesTamplate.html'}); addTab({title: 'Edit Templates', url: 'view/sales/sales-template/editSalesTamplate.html'} )"><a ><img src="images/icon_edit.png"/></a></li>
+                         <li ng-class="{active:isActiveTab({ url:'view/sales/sales-template/copySalesTemplate.html'})}" 
+                    ng-click="onClickTab({ url:'view/sales/sales-template/copySalesTemplate.html'}); addTab({title: 'Copy Templates', url: 'view/sales/sales-template/copySalesTemplate.html'} )"><a ng-click="copy()" ><img src="images/icon_copy.png"/></a></li>
+                        <li><a ng-click="inactiveSalesTemplate()"><img src="images/icon_inactive.png"/></a></li>
+                        <li><a ng-click="deleteSalesTemplate()"><img src="images/icon_delete.png"/></a></li>
+                    </ul>
+                    </div>
+
+                   <div class="side-icon-pop">  
+                    <ul ng-show="multipleSelect">
+                        <li><a ng-click="deleteSalesTemplate()"><img src="images/icon_delete.png"/></a></li>
+                    </ul>
+
+
+                </div>
+
+         <div ui-if="gridOptions1.data.length>0"  ui-grid="gridOptions1" class="grid" ui-grid-pagination ui-grid-selection  ui-grid-resize-columns ui-grid-move-columns ui-grid-auto-resize ng-style="getTableHeight()"></div>
+      </div>
+   </div>
+</div>

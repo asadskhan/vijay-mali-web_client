@@ -1,0 +1,88 @@
+<div class="header-bottom" ng-controller="homeCtrl">
+    <div class="home-content margin-40">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_marketing.png" /></span>
+            <h3>Marketing</h3>
+            <ul>
+                <li  ng-class="{active:isActiveTab({ url:'view/sales/sales-template/sales.html'})}" ng-click="onClickTab({ url:'view/sales/sales-template/sales.html'}); addTab({title: 'Marketing Templates', url: 'view/sales/sales-template/sales.html'} )"><a href="javascript:void(0)">Marketing Templates</a>
+                </li>
+                <li><a href="javascript:void(0)">Web Forms</a>
+                </li>
+                <li  ng-class="{active:isActiveTab({ url:'view/sales/accounts/account.html'})}" ng-click="onClickTab({ url:'view/sales/accounts/account.html'}); addTab({title: 'Contacts', url: 'view/sales/accounts/account.html'} )"><a href="javascript:void(0)">Contacts</a>
+                </li>
+                <li><a href="javascript:void(0)">Automation Designer </a>
+                </li>
+                <li><a href="javascript:void(0)">Broadcast Campaigns </a>
+                </li>
+                <li><a href="javascript:void(0)">A/B Campaigns </a>
+                </li>
+                <li><a href="javascript:void(0)">Social Campaigns</a>
+                </li>
+                <li><a href="javascript:void(0)">Website Tracking</a>
+                </li>
+                <li><a href="javascript:void(0)">Reports</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_sales.png" /></span>
+            <h3>Sales</h3>
+            <ul>
+                <li ng-class="{active:isActiveTab({ url:'view/sales/sales-template/sales.html'})}" ng-click="onClickTab({ url:'view/sales/sales-template/sales.html'}); addTab({title: 'Sales Templates', url: 'view/sales/sales-template/sales.html'} )">
+                    <a href="javascript:void(0)">Sales Templates</a>
+                </li>
+                <li ng-class="{active:isActiveTab({ url:'view/sales/calendar/calendarModuleView.html'})}" ng-click="onClickTab({ url:'view/sales/calendar/calendarModuleView.html'}); addTab({title: 'Calendar/Tasks', url: 'sales/calendar/calendarModuleView.html'} )">
+                    <a href="javascript:void(0)">Calendar/Tasks</a>
+                </li>
+                <li ng-class="{active:isActiveTab({ url:'view/sales/accounts/account.html'})}" ng-click="onClickTab({ url:'view/sales/accounts/account.html'}); addTab({title: 'Accounts', url: 'view/sales/accounts/account.html'} )">
+                    <a href="javascript:void(0)">Accounts</a>
+                </li>
+
+                <li ng-class="{active:isActiveTab({ url:'view/sales/opportunities/opportunities.html'})}" ng-click="onClickTab({ url:'view/sales/opportunities/opportunities.html'}); addTab({title: 'Opportunities', url: 'view/sales/opportunities/opportunities.html'} )"><a href="javascript:void(0)">Opportunities</a>
+                </li>
+                <li ng-class="{active:isActiveTab({ url:'view/sales/reports/reportMenu.html'})}" ng-click="onClickTab({ url:'view/sales/reports/reportMenu.html'}); addTab({title: 'Reports', url: 'view/sales/reports/reportMenu.html'} )"><a href="javascript:void(0)">Reports</a>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_services.png" /></span>
+            <h3>Service</h3>
+            <ul>
+                <li><a>Cases</a>
+                </li>
+                <li><a>Solutions</a>
+                </li>
+                <li><a>Projects</a>
+                </li>
+                <li><a>Issues</a>
+                </li>
+                <li><a>Reports</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 col-listing">
+            <span><img src="images/icon_setting.png" /></span>
+            <h3>Settings</h3>
+            <ul>
+                <li><a>Import</a>
+                </li>
+                <li><a>Database</a>
+                </li>
+                <li><a>Users</a>
+                </li>
+                <li><a>Workflows</a>
+                </li>
+                <li><a>Filters</a>
+                </li>
+                <li><a>Groups</a>
+                </li>
+                <li><a>Library</a>
+                </li>
+                <li><a>All Settings...</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

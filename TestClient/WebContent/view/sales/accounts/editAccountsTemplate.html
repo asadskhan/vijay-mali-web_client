@@ -1,0 +1,242 @@
+    <div class="sub-menu">
+    	
+    </div>
+  <div ng-controller="accountsCtrl">
+ <div class="container-fluid sf-container">
+  <form name="accountForm" ng-submit="submitForm(accountForm.$valid)" novalidate>
+		<div class="col-sm-6">
+			<button type="button" id="btnSave" name="btnSave" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnSave()">Save</button>
+			<button type="button" id="btnCancel" name="btnCancel" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnCancel()">Cancel</button>
+		</div>
+		<div class="col-md-12 margin-top">
+			<div class="sf-form-header sf-label ng-binding ng-scope">Company Details</div>
+		</div>
+		<div class="form-group">		
+		<div class="col-md-6">
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right">Company</label>				
+				<input class="form-control edit-input" type="text" ng-model="data.company">
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right red">Sales rep</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.salesrep" required>
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right">Industry</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.industry">
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right">Type</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.type">
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right">Address2</label>				
+				<input class="form-control edit-input" type="text" ng-model="data.address2">
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right">State</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.state">
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right">Zip Code</label>				
+				<input class="form-control edit-input" type="text" ng-model="data.zipCode">
+			</div><div class="form-group edit-form">		
+				<label class="edit-lable text-right">User List1</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.userList1">
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>			
+		</div>		
+		<div class="col-md-6">
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right red">Status</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.status" required>
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right">Priority</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.priority">
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right red">Source</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.source" required>
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>	
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Address1</label>
+				<input class="form-control edit-input" type="text" ng-model="data.address1">
+			</div>			
+			<div class="form-group edit-form">		
+				<label class="edit-lable text-right red">Country</label>							
+				<select id="sales_rep" class="form-control edit-input" ng-model="data.country" required>
+					<option value="Prospect" >Prospect</option>
+					<option value="Customer" >Customer</option>		
+				</select>
+			</div>	
+				<div class="form-group edit-form">
+				<label class="edit-lable text-right">City</label>
+				<input class="form-control edit-input" type="text">
+			</div>		
+				<div class="form-group edit-form">
+				<label class="edit-lable text-right">Website</label>
+				<input class="form-control edit-input" type="text">
+			</div>		
+		</div>	
+		</div>
+		<div class="col-md-12 margin-top">
+			<div class="sf-form-header sf-label ng-binding ng-scope">Contact Information</div>
+		</div>
+		<div class="form-group">		
+		<div class="col-md-6">
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Salutation</label>
+				<input class="form-control edit-input" type="text" ng-model="data.salutation">
+			</div>		
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Last name</label>
+				<input class="form-control edit-input" type="text" ng-model="data.lastname">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Other email</label>
+				<input class="form-control edit-input" type="email" ng-model="data.otheremail">
+			</div>		
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Mobile</label>
+				<input class="form-control edit-input" type="text" ng-model="data.mobile">
+			</div>		
+		</div>		
+		<div class="col-md-6">
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">First name</label>
+				<input class="form-control edit-input" type="text" ng-model="data.firstname">
+			</div>		
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Email</label>
+				<input class="form-control edit-input" type="email" ng-model="data.email">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Phone</label>
+				<input class="form-control edit-input" type="text" ng-model="data.phone">
+			</div>		
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Title</label>
+				<input class="form-control edit-input" type="text" ng-model="data.title">
+			</div>
+		</div>		
+		</div>
+		<div class="col-md-12 margin-top">
+			<div class="sf-form-header sf-label ng-binding ng-scope">Custom Fields</div>
+		</div>
+		
+	<div class="form-group">		
+		<div class="col-md-6">
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field1</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField1">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field3</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField3">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field15</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField15">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field7</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField7">
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field2</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField2">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field4</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField4">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field6</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField6">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Custom Field8</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CustomField8">
+			</div>			
+		</div>
+		<div class="col-md-12 form-group edit-form">
+				<label class="edit-lable text-right">Comments</label>
+				<textarea class="form-control edit-input" ng-model="data.comments"></textarea>
+		</div>
+	</div>
+	
+	<div class="col-md-12 margin-top">
+		<div class="sf-form-header sf-label ng-binding ng-scope">Additional Information</div>
+	</div>		
+	<div class="form-group">		
+		<div class="col-md-6">
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right red">Created by</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CreatedBy">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right red">Updated by</label>
+				<input class="form-control edit-input" type="text" ng-model="data.UpdatedBy">
+			</div>
+				<div class="form-group edit-form">
+				<label class="edit-lable text-right red">Visible to</label>
+				<input class="form-control edit-input" type="text" ng-model="data.VisibleTo">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right">Workflow Name</label>
+				<input class="form-control edit-input" type="text" ng-model="data.WorkflowName">
+			</div>			
+		</div>
+		<div class="col-md-6">
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right red">Created on</label>
+				<input class="form-control edit-input" type="text" ng-model="data.CreatedOn">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right red">Updated on</label>
+				<input class="form-control edit-input" type="text" ng-model="data.UpdatedOn">
+			</div>
+				<div class="form-group edit-form">
+				<label class="edit-lable text-right red">Outlook Sync</label>
+				<input class="form-control edit-input" type="text" ng-model="data.OutlookSync">
+			</div>
+			<div class="form-group edit-form">
+				<label class="edit-lable text-right red">Lead Score</label>
+				<input class="form-control edit-input" type="text" ng-model="data.LeadScore">
+			</div>
+		</div>		
+	</div>
+	<div class="col-sm-6">
+			<button type="button" id="btnSave" name="btnSave" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnSave()" ng-disabled="accountForm.$invalid">Save</button>
+			<button type="button" id="btnCancel" name="btnCancel" class="btn_bg1 btn sf-btn-gap btn-sf-primary" data-ng-click="fnCancel()">Cancel</button>
+		</div>
+	</div>\
+	</form>
+	</div>
+	</div>

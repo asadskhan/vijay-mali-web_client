@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html ng-app="soffrontApp">
+
+<head>
+    <title>Soffront Online</title>
+	 <script type="text/javascript" src="js/libs/angular.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="text/html; charset=UTF-8">
+    <meta name="description" content="Snapshot CRM, marketing automation and small business CRM software for small, mid-size and enterprise businesses.">
+    <meta name="keywords" content="marketing automation, CRM, Small Business CRM software, CRM software">
+    <meta name="robots" content="all">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.5/select2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+    <link href="css/dhtmlxscheduler.css" rel="stylesheet" />
+    <link href="css/home.css" rel="stylesheet">
+    <link href="css/sales.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='css/loading-bar.css' type='text/css' media='all' />
+    <link href="css/signin.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <header ng-include="'view/header/header.html'"></header>
+
+    <div ui-view></div>
+
+    <footer ng-include="'view/footer/footer.html'" ng-show="$state.includes('login')"></footer>
+
+    <!--<script src="//cdn.ckeditor.com/4.5.6/standard/ckeditor.js"></script>-->
+   
+    <!--<script src="https://s3-ap-southeast-1.amazonaws.com/naveensingh/posts_data/ckeditor_example/ng-ckeditor.min.js"></script>-->
+    <script type="text/javascript" src="js/libs/angular-ui-router.js"></script>
+    <script type="text/javascript" src="js/libs/angular-animate.js"></script>
+    <script type="text/javascript" src="js/libs/angular-sanitize.js"></script>
+    <script type="text/javascript" src="js/libs/angular-aria.min.js"></script>
+    <script type="text/javascript" src="js/libs/ui-bootstrap-tpls-2.1.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-loading-bar/0.9.0/loading-bar.min.js'></script>
+    <script src="js/libs/ui-grid.js"></script>
+
+    <script src="js/libs/moment.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+
+    <script src="http://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="http://cdn.zingchart.com/angular/zingchart-angularjs.js"></script>
+
+
+    <script type="text/javascript" src="js/app.js"> </script>
+    <script type="text/javascript" src="js/config/config.js"> </script>
+    <script type="text/javascript" src="js/router/router.js"> </script>
+
+    <script type="text/javascript" src="view/login/loginCtrl.js"></script>
+    <script type="text/javascript" src="view/home/homeCtrl.js"></script>
+    <script type="text/javascript" src="view/sales/accounts/accountCtrl.js"></script>
+    <script type="text/javascript" src="view/sales/accounts/accountsDataService.js"></script>
+    <script src="view/sales/sales-template/salesTemplateCtrl.js"></script>
+    <script src="view/sales/sales-template/salesDataService.js"></script>
+    <script src="view/sales/reports/reportsCtrl.js"></script>
+    <script src="view/sales/reports/reportsDataService.js"></script>
+    <script src="view/sales/calendar/calendarCtrl.js"></script>
+    <script src="view/sales/calendar/allAppointmentDataService.js"></script>
+    <script src="view/sales/calendar/pendingTaskDataService.js"></script>
+    <script src="view/sales/calendar/allTasksDataService.js"></script>
+    <script src="view/sales/opportunities/opportunitiesCtrl.js"></script>
+    <script src="view/sales/opportunities/opportunitiesDataService.js"></script>
+
+    <!--script for calendar module start-->
+    <script src="js/libs/select.js"></script>
+    <script src="js/libs/app.scheduler.js"></script>
+    <script src="js/libs/dhtmlxscheduler.js"></script>
+    <script src="js/libs/datetime-picker.js"></script>
+
+
+
+
+    <!--script for calendar module end-->
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+﻿<div ng-controller="pendingTaskCtrl">
+
+    <div class="row padd-top">
+    <div class="container-fluid">        
+
+        <div class="col-md-1" style="padding-right:0px;">
+            <a ng-click="createNewTask()"><img src="images/icon_add.png" title="Add">New Task</a>
+        </div>
+
+        <div class="col-md-1" style="display:none;">
+            <a ng-click="setup()"><img src="images/icon_customize.png" title="Setup" />Setup</a>
+        </div>
+
+        <div class="col-md-4">
+            <label class="col-md-2">Search</label>
+            <div class="col-md-10">
+             <select class="listmenu1" name="salesReps" id="salesReps">
+            <option value="All">All</option>
+        <option value="Ravi Teja Villa">Ravi Teja Villa</option></select>
+         <a><img src="images/icon_refresh_g.png" title="Refresh" /></a>
+            </div>
+        </div>
+
+        
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1">
+            <div class="side-icon-pop" ng-show="floatButtonShowFlag">
+                <ul>
+                    <li><a ng-click="addNote()" ng-show="addNoteFloatFlag"><img src="images/icon_add_notes.png" /></a></li>
+                    <li><a ng-click="complete()"><img src="images/icon_complete.png" /></a></li>
+                    <li><a ng-click="forward()"><img src="images/icon_forward.png" /></a></li>
+                    <li><a ng-click="delete()"><img src="images/icon_delete.png" /></a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <table class="table td-no-padding"  style="background-color: rgb(243, 182, 180);">
+                <thead>
+                    <tr>
+                        <th "="" style="background-color: rgb(243, 182, 180); color: black; font-weight: bold; font-size: 16px; padding: 20px 20px 0px;" colspan="2" class="ng-binding">
+                            Overdue(10)
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in overdue">
+                        <td style="border:none;"><input type="checkbox" ng-model="user.isChecked" ng-click="selectEntity()" /></td>
+                        <td style="border:none;">
+                            <div>
+                               {{user.t_dueby}}
+                            </div>
+                            <!--<div>
+                                <a ng-click="openPopup(user)">{{user.overduelink}}</a>
+                            </div>
+                            <div>
+                                {{user.overduecase}}
+                            </div>-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+           <table width="100%" cellspacing="0" cellpadding="0" border="0" id="dueTaskModule" style="width: 100%; border: 0px none; background-color: rgb(255, 240, 192);">
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                        <label ng-show="today.length == 0" class="" style="font-size: 16px; color: rgb(34, 34, 34); padding: 15px 15px 5px;">Today</label>                           
+                            <label ng-show="today.length != 0">Today({{today.length }})</label>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in today">
+                        <td style="border:none;"><input type="checkbox" ng-model="user.isChecked" ng-click="selectEntity()" /></td>
+                        <td style="border:none;">
+                            <div>
+                                {{user.t_dueby}}
+                            </div>
+                            <!--<div>
+                                <a ng-click="todayTask()">{{user.todaylink}}</a>
+                            </div>
+                            <div>
+                                {{user.todaycase}}
+                            </div>-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table class="table" style="border:2px solid #ddd;">
+                <thead>
+                    <tr>
+                        <th colspan="2"  style="background: transparent none repeat scroll 0 0;color: gray;padding: 10px;">
+                            <label ng-show="upcoming.length == 0" style="font-weight:bold;color: black">Upcoming</label>
+                            <label ng-show="upcoming.length != 0" style="font-weight:bold;color: black">Upcoming({{upcoming.length }})</label>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in upcoming" style="border-bottom:2px solid #ddd;">
+                        <td style="border:none;"><input type="checkbox" ng-model="user.isChecked" ng-click="selectEntity()" /></td>
+                        <td style="border:none;">
+                            <div>
+                                {{user.t_dueby}}
+                            </div>
+                            <!--<div>
+                                <a ng-click="upcomingTask()">{{user.upcominglink}}</a>
+                            </div>
+                            <div>
+                                {{user.upcomingcase}}
+                            </div>-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
