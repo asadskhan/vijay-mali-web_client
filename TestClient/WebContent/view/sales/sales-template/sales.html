@@ -4,7 +4,7 @@
        
        <!-- Split button -->
        <div class="btn-group" uib-dropdown>
-         <span class="title dropdown-img" uib-dropdown-toggle title="All" ng-init="groupSort= {label:'Company'}">
+         <span class="title dropdown-img" uib-dropdown-toggle title="All" ng-init="groupSort= {label:'Category'}">
                {{groupSort.label}}  
                 <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img" >
          </span>
@@ -23,6 +23,16 @@
          <div class="btn-group" uib-dropdown>
             <div  class="btn btn-link bnt-title" uib-dropdown-toggle>
                All ({{salesData.data.fields.length}}) 
+            </div>
+         </div>
+          <div class="btn-group" uib-dropdown>
+            <div  class="btn btn-link bnt-title" uib-dropdown-toggle>
+               Newsletter ({{salesData.data.fields.length}}) 
+            </div>
+         </div>
+         <div class="btn-group" uib-dropdown>
+            <div  class="btn btn-link bnt-title" uib-dropdown-toggle>
+               Empty ({{salesData.data.fields.length}}) 
             </div>
          </div>
       </div>

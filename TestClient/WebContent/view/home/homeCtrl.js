@@ -45,7 +45,8 @@
         }
          $scope.removeTab = function (index) {
             $rootScope.tabs.splice(index, 1);
-            $rootScope.currentTab = 'view/home/home-content.html';
+           $rootScope.currentTab = 'view/home/home-content.html';
+            $scope.tabs.splice(x, 1);
         };
 
          $scope.addTab = function (tab) {
