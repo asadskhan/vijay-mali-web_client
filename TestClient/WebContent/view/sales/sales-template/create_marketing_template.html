@@ -1,0 +1,481 @@
+<html>
+<head>
+	<title>Soffront Online</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/spectrum.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<style>
+	
+	</style>
+</head>
+
+
+
+<body class="body_bg">
+<div id="emailTemplateCategory">
+
+
+<div id="displayWaitDiv" class="ajax-loader" align="center" style="position: fixed; display: none;">
+<div>
+<img id="loader" name="loader" src="/images/loader.gif" alt="Processing... please wait..." title="Processing... please wait...">
+</div>
+<div style="font-weight:bold; font-size: 12px;">
+			Processing... please wait..</div>
+	</div>
+	<div align="left" class="top_btn_area_marketing">
+	<div  class="btn_bg1_marketing" onclick="">Close</div>
+	<div class="balance"></div>
+	</div>
+	<div id="inside_page_content" style="position: relative; width=100%;">
+	<div class="table_area">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+    <tbody><tr>
+		<td align="left" valign="top" width="190" class="formTextLebelNew">
+	<div class="template-tool-panel" style="width:190px; height: auto;" id="etCategory">
+		<ul class="template-ui-tabs">
+		<li class="ui-tab"><a id="colorFontLink" href="javascript:void(0);">Category</a></li>    
+		</ul> 
+	<div class="template-cf-panel" style="width: 100%; max-height:300px;">
+   <div class="template-cf-header">
+	<table cellspacing="0" cellpadding="0" width="100%">
+	<tbody><tr><td width="5%">
+	<input type="checkbox" name="categoryChBox" id="Auto Response" value="Auto Response" onclick="processLibraryTemplate(this.id)" checked="checked">
+	</td>
+	<td width="95%">	
+<div style="width:150px;white-space: pre; overflow: hidden; text-overflow: ellipsis;" title="Auto Response">Auto Response</div>
+	</td>	 
+	</tr></tbody></table>
+	</div>
+<div class="template-cf-header">
+	<table cellspacing="0" cellpadding="0" width="100%">
+	<tbody><tr><td width="5%">
+   <input type="checkbox" name="categoryChBox" id="Marketing Template" value="Marketing Template" onclick="processLibraryTemplate(this.id)" checked="checked">
+	</td>
+	<td width="95%">	
+ <div style="width:150px;white-space: pre; overflow: hidden; text-overflow: ellipsis;" title="Marketing Template">Marketing Template</div>
+ </td>	 
+</tr></tbody></table>
+</div>
+					
+<div class="template-cf-header">
+ <table cellspacing="0" cellpadding="0" width="100%">
+<tbody><tr><td width="5%">
+<input type="checkbox" name="categoryChBox" id="Newsletter" value="Newsletter" onclick="processLibraryTemplate(this.id)" checked="checked">
+		</td>
+		<td width="95%">	
+<div style="width:150px;white-space: pre; overflow: hidden; text-overflow: ellipsis;" title="Newsletter">Newsletter</div>
+		</td>	 
+		</tr></tbody></table>
+		</div>
+	<div class="template-cf-header">
+	<table cellspacing="0" cellpadding="0" width="100%">
+	<tbody><tr><td width="5%">
+<input type="checkbox" name="categoryChBox" id="Greetings" value="Greetings" onclick="processLibraryTemplate(this.id)" checked="checked">
+		</td>
+		<td width="95%">	
+<div style="width:150px;white-space: pre; overflow: hidden; text-overflow: ellipsis;" title="Greetings">Greetings</div>
+		</td>	 
+		</tr></tbody></table>
+		</div>
+	</div>
+	<br><br>
+	<ul id="layoutHeader" class="template-ui-tabs">
+	<li class="ui-tab"><a id="colorFontLink" href="javascript:void(0);">Layout</a></li>    
+	</ul> 
+<div id="layoutBody" class="template-cf-panel" style="width: 100%; height:auto;">
+	<div class="template-cf-header" style="text-align:center;">
+	<ul class="layout-ui-tabs">
+	<li class="ui-tab" id="layout1" layoutid="1" title="Left Sidebar Layout" onclick="javascript: openLayout(this.id);">
+  <img alt="Left Sidebar" src="images/marketing/layout_left_sidebar.png" width="35">
+	</li>
+	<li class="ui-tab" id="layout2" layoutid="2" title="Right Sidebar Layout" onclick="javascript: openLayout(this.id);">
+	<img alt="Right Sidebar" src="images/marketing/layout_right_sidebar.png" width="35">
+	</li>
+	<li class="ui-tab" id="layout3" layoutid="3" title="Horizontal Layout" onclick="javascript: openLayout(this.id);">
+	<img alt="Horizontal Layout" src="images/marketing/layout_horizontal_block.png" width="35">
+	</li>
+	<li class="ui-tab" id="layout4" layoutid="4" title="Multiple Column Layout" onclick="javascript: openLayout(this.id);">
+	<img alt="Multiple Column Layout" src="images/marketing/layout_multipal_column_blocks.png" width="35">
+	</li>
+	</ul>
+	</div>
+	</div>
+	</div>
+	</td>
+<td align="left" valign="top" width="72%"> 
+	<div class="row">
+       <div class="prive-sty">
+	   <div class="etText">Auto Response Sample</div>
+	   	    <div id="parent" class="tonDiv">
+                <div id="hover-content">
+                 <!--  <a href="view/sales/sales-template/creatingtemplates.html" style="text-decoration: none;"><button ng-click="clickEvent()" id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button></a> -->
+                  <a href="" ng-class="{active:isActiveTab({ url:'view/sales/sales-template/creatingtemplates.html'})}" style="text-decoration: none;"><button ng-click="onClickTab({ url:'view/sales/sales-template/creatingtemplates.html'}); addTab({title: 'Create Marketing Template', url: 'view/sales/sales-template/creatingtemplates.html'} )" id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button></a>
+                  <a href="create_marketing_template_preview_auto_response_sample.html" style="text-decoration: none;"><button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button></a>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Bakery Left Sidebar</div>
+	   	    <div id="parent1" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <a href="create_marketing_template_preview_Bakery_Left_Sidebar.html" style="text-decoration: none;"><button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button></a>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Banner Promotion Multiple Column</div>
+	   	    <div id="parent2" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                   <a href="create_marketing_template_preview_Banner_Promotion_Multiple_Column.html" style="text-decoration: none;"><button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button></a>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	   
+	   <div class="prive-sty">
+	   <div class="etText">CASL Permission Request</div>
+	   	    <div id="parent3" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <a href="create_marketing_template_CASL_Permission_Request.html" style="text-decoration: none;"><button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button></a>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Cleaning Services Left Sidebar</div>
+	   	    <div id="parent4" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <a href="create_marketing_template_Cleaning_Services_Left_Sidebar.html" style="text-decoration: none;"><button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button></a>
+                </div>
+            </div>	   
+       </div>
+	
+	<div class="prive-sty">
+	   <div class="etText">Cleaning Services Right Sidebar</div>
+	   	    <div id="parent5" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <a href="create_marketing_template_Cleaning_Services_Right_Sidebar.html" style="text-decoration: none;"><button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button></a>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">College Newsletter Right Sidebar</div>
+	   	    <div id="parent6" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	
+	 <div class="prive-sty">
+	   <div class="etText">Consulting Card Horizontal</div>
+	   	    <div id="parent7" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Consulting Newsletter Right Sidebar</div>
+	   	    <div id="parent8" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Early Bird Special Horizontal</div>
+	   	    <div id="parent9" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	    <div class="prive-sty">
+	   <div class="etText">Easter Left Sidebar</div>
+	   	    <div id="parent10" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Education Calendar Left Sidebar</div>
+	   	    <div id="parent11" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Education Calendar Right Sidebar</div>
+	   	    <div id="parent12" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Education Event Horizontal</div>
+	   	    <div id="parent13" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Education Newsletter Left Sidebar</div>
+	   	    <div id="parent14" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Education Newsletter Right Sidebar</div>
+	   	    <div id="parent15" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	    <div class="prive-sty">
+	   <div class="etText">Event Template Horizontal</div>
+	   	    <div id="parent16" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	
+	<div class="prive-sty">
+	   <div class="etText">Event Template Sample Horizontal</div>
+	   	    <div id="parent17" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Family home Left Sidebar</div>
+	   	    <div id="parent18" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	    <div class="prive-sty">
+	   <div class="etText">Family home Right Sidebar</div>
+	   	    <div id="parent19" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	    <div class="prive-sty">
+	   <div class="etText">Financial Adviser Left Sidebar</div>
+	   	    <div id="parent20" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Financial Adviser Right Sidebar</div>
+	   	    <div id="parent21" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Fitness Left Sidebar</div>
+	   	    <div id="parent22" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	
+	<div class="prive-sty">
+	   <div class="etText">Fitness Right Sidebar</div>
+	   	    <div id="parent23" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Food Event Left Sidebar</div>
+	   	    <div id="parent24" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Food Event Right Sidebar</div>
+	   	    <div id="parent25" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Green Promotion Horizontal</div>
+	   	    <div id="parent26" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Gym Left Sidebar</div>
+	   	    <div id="parent27" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Gym Right Sidebar</div>
+	   	    <div id="parent28" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   <div class="prive-sty">
+	   <div class="etText">Healthcare Left Sidebar</div>
+	   	    <div id="parent29" class="tonDiv">
+                <div id="hover-content">
+                  <button id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button>
+                  <button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
+			      <span class="ctn_img"> </span>Preview</button>
+                </div>
+            </div>	   
+       </div>
+	   
+	   
+	  
+	   
+	   
+
+	</div>
+
+	
+</td>		
+</tr>
+</tbody>
+</table>
+</div>
+
+
+</div>
+
+
+<div align="left" class="top_btn_area" style="padding-top:4px;">
+<div align="left" class="btn_bg1_end" onclick="" style="float: left;margin-right: 10px;">Close</div>
+<div class="balance"></div>
+</div>
+	
+</div> 
+</body>
+<script>
+      jQuery('.img_class').hover(function() {
+      jQuery('.etButtonDiv').show();
+}, function() {
+      jQuery('.etButtonDiv').hide();
+});
+</script>
+</html>

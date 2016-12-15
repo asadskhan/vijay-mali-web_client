@@ -1,0 +1,284 @@
+<!--start on 9 December mansi-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Soffront Online</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="css/jquery_list.css">
+<!--start on 10 December mansi-->
+<link rel="stylesheet" href="css/main.css">
+<!--end on 10 December mansi-->
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div id="parentView">
+	<div class="submenu_area">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr>
+		<td valign="top" align="left">
+			<div style="overflow: hidden; width: 100%;">
+				<select class="listmenu1 float-left" style="width: 100%; visibility: hidden; display: none;" id="fieldLists" onchange="getCntAndValueList();">
+				
+					<option section="field" uniqueid="fieldt_catagory" value="t_catagory" tablefldname="t_catagory">Category</option>
+				
+					<option section="field" uniqueid="fieldt_owner_name" value="t_owner_name" tablefldname="t_owner_name">Owner</option>
+				
+					<option section="field" uniqueid="fieldt_status" value="t_status" tablefldname="t_status">Status</option>
+				
+				</select>
+				<div class="dropdown-box" style="height: 22px; float: left;">
+				  <div class="dropdown-header">
+				   <span class="title" title="Category">Category</span>
+				   <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img">
+				  </div>
+				  <div class="drop-menu-box" style="display: none;">
+				  <div class="menu-items">
+				  <table cellspacing="0" cellpadding="0"><tbody><tr class="table-tr"><td valign="top">
+				  <div class="drop-menu-item selected" title="Category" value="t_catagory" section="field"><a href="marketing.html">Category</a></div>
+				  <div class="drop-menu-item" title="Owner" value="t_owner_name" section="field"><a href="marketing_owner.html">Owner</a></div>
+				  <div class="drop-menu-item" title="Status" value="t_status" section="field"><a href="marketing_status.html">Status</a></div>
+				  </td></tr>
+				  </tbody>
+				  </table>
+				  </div>
+				  </div>
+				</div>
+				<img src="images/submenu_arrow.png" class="arrow">
+				<ul class="sublist float-left" id="navigationFields" style="margin: 0px; padding: 0px; visibility: visible;">
+				<li class="field ui-tab" style="text-overflow: inherit; max-width: 564px; padding-right: 25px;">
+				<a href="javascript:void(0);" title="All (1)" id="AllField1" class="active">All (1)</a>
+				</li>
+				<li class="field ui-tab" style="text-overflow: inherit; max-width: 564px; padding-right: 0px;">
+				<a href="javascript:void(0);" title="Newsletter (1)" id="NewsletterField2">Newsletter (1)</a>
+				</li>
+				</ul>
+			</div>
+		</td>
+	</tr>
+	</tbody></table>
+	</div>
+</div>
+<div id="spreadsheet">
+<div id="inside_page_content2" style="margin-top: 30px; margin-right: 1%">
+	<div class="icon_area">
+			
+		    <!-- <span id="addIcon" onclick="" style="margin-right: 8px; cursor: pointer;">
+		    	<a href="create_marketing_template.html"><img src="images/icon_add.png" width="16" height="16" border="0" title="Add" style="margin-right:3px; vertical-align:top;"></a> 
+		    	<a href="create_marketing_template.html"><span id="addIconText">Add</span></a>
+		    </span> -->
+		   
+		    <span class="add-icon" ng-class="{active:isActiveTab({ url:'view/sales/sales-template/create_marketing_template.html'})}" ng-click="onClickTab({ url:'view/sales/sales-template/create_marketing_template.html'}); addTab({title: 'Create Marketing Template', url: 'view/sales/sales-template/create_marketing_template.html'} )">
+            <img src="images/icon_add.png">Add
+            </span>
+			<span onclick="refreshManagerPage();" style="margin-right: 8px; cursor: pointer;">
+	   			<img alt="Refresh" src="images/icon_refresh_g.png" width="16" height="16" title="Refresh" border="0" style="margin-right:3px; vertical-align:top;">
+	   			Refresh
+	   		</span>
+	</div>
+	<div id="name">
+		<div width="15%" align="right" class="top_text3" style="padding-right:5px; font-weight: bold;" id="objectValueStr">&nbsp;Name</div>
+			<div class="textbox_area1">
+				<ul id="nav2">
+          <li>
+            <div align="right" class="top_text3" id="dropbox1"><a href="javascript:void(0);"  id="trigger" style="outline: none;">
+             <img src="images/img_down_arrow.png" border="0" class="img_margin2"></a></div>
+             <!--start on 10 December mansi-->
+            <ul class="dropbox" id="objDrop">
+            <li>
+            <a href="javascript: void(0);">&nbsp;Name</a>
+            </li>
+            <li>
+            <a href="javascript: void(0);">&nbsp;Category</a>
+            </li>
+            <li>
+            <a href="javascript: void(0);">&nbsp;Subject</a>
+            </li>
+            <li>
+            <a href="javascript: void(0);">&nbsp;Owner</a>
+            </li>
+            <li>
+            <a href="javascript: void(0);">&nbsp;Status</a>
+            </li>
+            <li>
+            <a href="javascript: void(0);">&nbsp;All</a>
+            </li>
+            </ul>
+                <!--end on 10 December mansi-->
+          </li>
+        </ul>
+    
+        <input name="formCondition" type="text" class="textbox1" id="formCondition" placeholder=" Type a keyword and press enter">
+        <img src="images/icon_magnifying.png" border="0" id="search1" title="Find">
+    </div>
+			</div>
+			<div id="recordFetch" class="icon_area" style="float: right;">
+			  <div class="page_number">
+			   <b id="listViewFrom" class="list_gray">1</b>-<b id="listViewTo" class="list_gray">1</b>&nbsp;of&nbsp;
+			   <b id="listViewTotal" class="list_gray">1</b>	
+			  </div>
+			  <div class="gmail-buttons">
+			  <div class="gmail-img-button" title="Previous page" callback="GoBack" style="margin-right: 4px;">
+			  <img src="images/arrow_left_gray.png" align="absmiddle">
+			  </div>
+			  <div class="gmail-img-button" title="Next page" callback="GoNext" style="margin-right: 4px;">
+			  <img src="images/arrow_right_gray.png" align="absmiddle">
+			  </div>
+			  <div class="gmail-img-button" title="Set page size" callback="showFetchSize" style="margin-right: 4px;"><img src="images/arrow_down_gray.png" align="absmiddle">
+			  </div>
+			  </div>		
+			</div>
+</div>
+</div>
+<div class="list_gray_box" style="padding: 0px;" id="recordList">
+<table  cellpadding="0" cellspacing="0" class="listview_table table-colsizable" style="width: 1278px;">
+   <thead>
+      <tr>
+         <th width="35" align="left" valign="top">
+            <input type="checkbox" name="selectAll" title="Select all" class="listview_header_checkbox">
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td selected">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><strong class="arrow">↑</strong>
+                  <span id="recordHeading91" title="Updated By">Updated By</span>
+               </div>
+            </div>
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><span id="recordHeading85" title="Name">Name</span></div>
+            </div>
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><span id="recordHeading86" title="Category">Category</span></div>
+            </div>
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><span id="recordHeading87" title="Subject">Subject</span></div>
+            </div>
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><span id="recordHeading88" title="Status">Status</span></div>
+            </div>
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><span id="recordHeading89" title="Owner">Owner</span></div>
+            </div>
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><span id="recordHeading90" title="Created On">Created On</span></div>
+            </div>
+         </th>
+         <th align="left" valign="top" class="listview_pheader_td">
+            <div class="table-colsizable-handler" title="Expand/Collapse this column"></div>
+            <div class="listview_pheader_div">
+               <div class="listview_pheader_cdiv"><span id="recordHeading92" title="Updated On">Updated On</span></div>
+            </div>
+         </th>
+      </tr>
+   </thead>
+   <tbody>
+   <tr class="border_bottom" id="r22173">
+      <td align="left" valign="top"><input type="checkbox" name="recordCB" value="22173" id="record22173" class="listview_checkbox"></td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r91" title="Ravi Teja">Ravi Teja</span></div>
+         </div>
+      </td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r852217322173" class="record_title" title="123456" style="text-decoration: underline; cursor: pointer;">123456</span></div>
+         </div>
+      </td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r86" title="Newsletter">Newsletter</span></div>
+         </div>
+      </td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r87">Consulting Card Horizontal</span></div>
+         </div>
+      </td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r88" title="Inactive">Inactive</span></div>
+         </div>
+      </td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r89" title="Ravi Teja">Ravi Teja</span></div>
+         </div>
+      </td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r90" title="12/02/16 06:48 AM">12/02/16 06:48 AM</span></div>
+         </div>
+      </td>
+      <td align="left" valign="top" class="listview_precord_td">
+         <div class="listview_precord_div">
+            <div class="listview_precord_cdiv"><span id="r92" title="12/02/16 06:48 AM">12/02/16 06:48 AM</span></div>
+         </div>
+      </td>
+   </tr>
+</tbody>
+</table>
+</div>
+<div id="recordFetch1" class="icon_area" style="float: right;">
+           <div class="page_number">
+            <b id="listViewFrom" class="list_gray">1</b>-<b id="listViewTo" class="list_gray">1</b>&nbsp;of&nbsp;
+            <b id="listViewTotal" class="list_gray">1</b>   
+           </div>
+           <div class="gmail-buttons">
+           <div class="gmail-img-button" title="Previous page" callback="GoBack" style="margin-right: 4px;">
+           <img src="images/arrow_left_gray.png" align="absmiddle">
+           </div>
+           <div class="gmail-img-button" title="Next page" callback="GoNext" style="margin-right: 4px;">
+           <img src="images/arrow_right_gray.png" align="absmiddle">
+           </div>
+           <div class="gmail-img-button" title="Set page size" callback="showFetchSize" style="margin-right: 4px;"><img src="images/arrow_down_gray.png" align="absmiddle">
+           </div>
+           </div>    
+         </div>
+</body>
+<script>
+
+ $(document).ready(function() {
+        $('.dropdown-header').click(function() {
+                $('.drop-menu-box').slideToggle("fast");
+        });
+    });
+  </script>
+  <!--start on 10 December mansi-->
+  <script>
+
+ $(document).ready(function() {
+        $('.img_margin2').click(function() {
+                $('.dropbox').slideToggle("fast");
+        });
+    });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $("ul.dropbox li a").click(function() {
+                var t1 = $(this).text();
+                $("#objectValueStr").text(t1);
+                 $("ul.dropbox").hide();
+            });
+    });
+  </script>
+  <!--end on 10 December mansi-->
+</html>
+<!--end on 9 December mansi-->
