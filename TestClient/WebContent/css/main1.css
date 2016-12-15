@@ -1,0 +1,328 @@
+/*start on 10 Demeber mansi*/
+ ul.dropbox {
+    position: absolute;
+    padding: 0px;
+    border: 1px solid #DBDBDB;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    z-index: 99;
+    -moz-box-shadow: 4px 4px 4px #DCDCDC;
+    box-shadow: 4px 4px 4px #DCDCDC;
+    left: 0px; 
+    background-color: rgb(255, 255, 255); 
+    display: none;
+}
+#nav2 ul.dropbox li {
+    width: 132px;
+    padding: 4px 4px;
+    border-bottom: 1px solid #e5e5e5;
+}
+#nav2 li {
+    position: relative;
+    z-index: 99;
+    margin: 0 1px;
+}
+#nav2 ul.dropbox li a {
+    color: #909090;
+}
+#nav2 li a {
+    font: normal 13px Helvetica, Arial, sans-serif;
+    display: block;
+    height: 15px;
+    letter-spacing: -1px;
+    text-decoration: none;
+    margin: 0px;
+}
+ul#objDrop {
+    margin-left: -42px;
+    margin-top: 20px;
+}
+ul#objDrop1 {
+    margin-left: -42px;
+    margin-top: 3px;
+}
+#objectValueStr1{
+    padding-right:5px; font-weight: bold;float:left;margin-top: 34px;margin-left: 62px;
+}
+ul .dropbox1{
+    left: 0px; overflow: hidden; height: 312px; display: block; margin: 0px 0px 0px -1px; padding: 0px; width: 110px; opacity: 1;
+}
+.top_btn_area_advance{
+    margin-bottom: 10px;
+    width: 90%;
+    margin-top: 30px;
+    float: left;
+    margin-left: 52px;
+}
+.btn_bg1_advanced{
+    float:left; 
+    margin-right:10px
+    display: table;
+    background: #058ae5;
+    border: 0px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: bold 12px arial, verdana;
+    padding: 8px 20px;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+#inside_page_content_advance{
+    display: block;
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-radius: 10px;
+}
+#gray_box_advance{
+    color: #F37736;
+    border-radius: 0px 10px 10px 10px;
+    background-color: #ffffff;
+    position: relative;
+    margin-top: 0px;
+}
+.table_area_advance table td {
+    font-family: Arial,sans-serif, Helvetica;
+    font-size: 13px;
+    padding: 2px 0;
+}
+.textbox-adv {
+    background-color: #FFFFFF;
+    font: 13px Arial, Helvetica, sans-serif;
+    height: 21px;
+    padding: 0 2px;
+    width: 236px;
+   -webkit-border-radius: 3px;
+    border: 1px solid #CBCBCB;
+    margin-left: 9px;
+    border-radius: 4px;
+}
+.table_area_advance {
+    margin-top: 80px;
+    margin-left: 16px;
+}
+/*end on 10 December mansi*/ 
+
+/*Start 10 December Udesh*/
+
+.body_bg {
+    margin: 0;
+    background:url(./images/NewDesign/bg.png);
+}
+.btn_bg1_marketing{
+    background: #058ae5;
+    border: 0px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: bold 12px arial, verdana;
+    white-space: nowrap;
+    padding: 8px 20px;
+    float: left;
+	margin-left: 25px;
+}
+.top_btn_area_marketing{width: 90%;margin: 0 4.5% 3px;margin-top:30px;}
+#inside_page_content {
+    width: 90%;
+    margin: 0 4.5%;
+    display: block;
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-radius: 10px;
+}
+.template-ui-tabs {
+    border: 0 none;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1) inset;
+    clear: both;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.3;
+    list-style: none outside none;
+    margin: 0 0 -3px;
+    outline: 0 none;
+    overflow: hidden;
+    text-align: left;
+    text-decoration: none;
+    padding: 6px;
+    width: 100%;
+    background-color: #95C2EF;
+   
+}
+.template-cf-header {
+    font-size: 13px;
+    font-family: Arial, sans-serif, Helvetica;
+    display: block;
+    margin: 0;
+    padding: 4px 6px;
+    background-color: #e8eff7;
+    border-bottom: 1px solid #D5D5D5;
+    color: #000000;
+}
+.template-cf-panel {
+    display: block;
+    border: 1px solid #D8D8D8;
+    background: none !important;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 400px;
+}
+.template-ui-tabs .ui-tab a {
+   
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+    font-size: 12px;
+    line-height: 32px;
+    margin: 0;
+    outline: medium none;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.layout-ui-tabs {
+    border: 0 none;
+    clear: both;
+    display: inline-flex;
+    font-size: 12px;
+    line-height: 1.3;
+    list-style: none outside none;
+    margin: 0;
+    padding: 5px;
+    outline: 0 none;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.layout-ui-tabs .ui-tab {
+    float: left;
+    position: relative;
+    white-space: nowrap;
+    border: 1px solid #929292;
+    -moz-box-shadow: 0 1px 0px 0px rgba(255,255,255,.2);
+    -webkit-box-shadow: 0 1px 0px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 0px 0px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    background: #A2A2A2;
+    background: -webkit-linear-gradient(top, #e8eff7, #e8eff7);
+    background: -o-linear-gradient(top, #e8eff7, #e8eff7);
+    background: -moz-linear-gradient(top, #e8eff7, #e8eff7);
+    background: linear-gradient(top, #e8eff7, #e8eff7);
+}
+.etText {
+    padding: 0 0 5px;
+    height: 30px;
+    display: block;
+    width: 175px;
+    text-align: centre;
+    margin: 0 auto;
+    color: #636362;
+    display: table-cell;
+    vertical-align: bottom;
+	text-align: center;
+}
+.etButtonDiv {
+    width: 175;
+    height: 160px;
+    padding-top: 94px;
+    padding-left: 29px;
+    padding-right: 29px;
+    position: absolute;
+    z-index: 1;
+    background: url(../images/marketing/blur_bg.png) no-repeat top left;
+	display:none;
+}
+.img_class {
+    width: 175px;
+    height: 250px;
+    display: none;
+    padding: 0px;
+}
+.small_btn {
+    display: table;
+    background: #058ae5;
+    border: 0px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: bold 12px arial, verdana;
+    padding: 3px 15px;
+    text-align: center;
+    white-space: nowrap;
+}
+.small_btn_gray {
+    background-color: #B8B8B8;
+    border: 0 none;
+   
+    color: #FFFFFF;
+    cursor: pointer;
+    display: table;
+    font: bold 12px arial,verdana;
+    padding: 3px 15px;
+    text-align: center;
+    white-space: nowrap;
+  
+}
+.btn_bg1_end {
+    background: #058ae5;
+    border: 0px;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font: bold 12px arial, verdana;
+    white-space: nowrap;
+    padding: 8px 20px;
+    margin-left: 20px;
+}
+/*End 10 December Udesh*/
+/*start 13 december Udesh*/
+#parent3:hover #hover-content {display:block;}
+#parent4{background: rgba(0, 0, 0, 0) url("../images/marketing/cleaning_services_left.png") no-repeat scroll left top; height:252px;}
+#parent4:hover #hover-content {display:block;}
+#parent5{background: rgba(0, 0, 0, 0) url("../images/marketing/cleaning_services_right.png") no-repeat scroll left top; height:252px;}
+#parent5:hover #hover-content {display:block;}
+#parent6{background: rgba(0, 0, 0, 0) url("../images/marketing/education.png") no-repeat scroll left top; height:252px;}
+#parent6:hover #hover-content {display:block;}
+#parent7{background: rgba(0, 0, 0, 0) url("../images/marketing/consulting_card1.png") no-repeat scroll left top; height:252px;}
+#parent7:hover #hover-content {display:block;}
+#parent8{background: rgba(0, 0, 0, 0) url("../images/marketing/Consulting-Newsletter-Right.png") no-repeat scroll left top; height:252px;}
+#parent8:hover #hover-content {display:block;}
+#parent9{background: rgba(0, 0, 0, 0) url("../images/marketing/early_bird_special.png") no-repeat scroll left top; height:252px;}
+#parent9:hover #hover-content {display:block;}
+#parent10{background: rgba(0, 0, 0, 0) url("../images/marketing/easter_left.png") no-repeat scroll left top; height:252px;}
+#parent10:hover #hover-content {display:block;}
+#parent11{background: rgba(0, 0, 0, 0) url("../images/marketing/education_calender_left.png") no-repeat scroll left top; height:252px;}
+#parent11:hover #hover-content {display:block;}
+#parent12{background: rgba(0, 0, 0, 0) url("../images/marketing/education_calender_right.png") no-repeat scroll left top; height:252px;}
+#parent12:hover #hover-content {display:block;}
+#parent13{background: rgba(0, 0, 0, 0) url("../images/marketing/edu_event.png") no-repeat scroll left top; height:252px;}
+#parent13:hover #hover-content {display:block;}
+#parent14{background: rgba(0, 0, 0, 0) url("../images/marketing/education_newsletter_left.png") no-repeat scroll left top; height:252px;}
+#parent14:hover #hover-content {display:block;}
+#parent15{background: rgba(0, 0, 0, 0) url("../images/marketing/education_newsletter_right.png") no-repeat scroll left top; height:252px;}
+#parent15:hover #hover-content {display:block;}
+#parent16{background: rgba(0, 0, 0, 0) url("../images/marketing/Event-Template-Horizontal.png") no-repeat scroll left top; height:252px;}
+#parent16:hover #hover-content {display:block;}
+#parent17{background: rgba(0, 0, 0, 0) url("../images/marketing/Event-Template-Sample-Horiz.png") no-repeat scroll left top; height:252px;}
+#parent17:hover #hover-content {display:block;}
+#parent18{background: rgba(0, 0, 0, 0) url("../images/marketing/Family_home_Left_Sidebar.png") no-repeat scroll left top; height:252px;}
+#parent18:hover #hover-content {display:block;}
+#parent19{background: rgba(0, 0, 0, 0) url("../images/marketing/Family_home_Right_Sidebar.png") no-repeat scroll left top; height:252px;}
+#parent19:hover #hover-content {display:block;}
+#parent20{background: rgba(0, 0, 0, 0) url("../images/marketing/Financial_Adviser_Left_Sidebar.png") no-repeat scroll left top; height:252px;}
+#parent20:hover #hover-content {display:block;}
+#parent21{background: rgba(0, 0, 0, 0) url("../images/marketing/Financial_Adviser_Right_Sidebar.png") no-repeat scroll left top; height:252px;}
+#parent21:hover #hover-content {display:block;}
+#parent22{background: rgba(0, 0, 0, 0) url("../images/marketing/fitness_left.png") no-repeat scroll left top; height:252px;}
+#parent22:hover #hover-content {display:block;}
+#parent23{background: rgba(0, 0, 0, 0) url("../images/marketing/fitness_right.png") no-repeat scroll left top; height:252px;}
+#parent23:hover #hover-content {display:block;}
+#parent24{background: rgba(0, 0, 0, 0) url("../images/marketing/food_left.png") no-repeat scroll left top; height:252px;}
+#parent24:hover #hover-content {display:block;}
+#parent25{background: rgba(0, 0, 0, 0) url("../images/marketing/food_right.png") no-repeat scroll left top; height:252px;}
+#parent25:hover #hover-content {display:block;}
+
+/*End 13 december Udesh*/
