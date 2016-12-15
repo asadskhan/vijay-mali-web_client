@@ -10,7 +10,8 @@
             apiPendingTask: "https://testapi.snapshotcrm.com/v3/tasks/",
             apiAllTask: "https://testapi.snapshotcrm.com/v3/tasks/",
             apiOpportunities:"https://testapi.snapshotcrm.com/v3/opportunities/",
-            apiSalesReports:"https://testapi.snapshotcrm.com/v3/reports/sales"  
+            apiSalesReports:"https://testapi.snapshotcrm.com/v3/reports/sales",
+            apiMarketinTemplate:"https://testapi.snapshotcrm.com/v3/marketingtemplates/"
         });
 
 })();

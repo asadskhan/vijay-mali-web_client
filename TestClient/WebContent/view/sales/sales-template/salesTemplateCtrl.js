@@ -18,6 +18,12 @@
 
         $scope.refresh = function () {
             salesDataServices.getSalesDetails().then(function (data) {
+            	 //menu items
+            	$scope.menuData=[
+            	               {label:'category'},
+            	               {label:'owner'},
+            	               {label:'status'}
+            	];
                 $scope.salesData = data;
                 $scope.gridOptions1.data = data.data.records;
             })
@@ -25,6 +31,18 @@
                     $scope.error = 'data not fount';
                 });
         }
+ $scope.anotherRefresh = function (group)
+        {
+        			
+        			salesDataServices.getListViewByFieldName(group).then(function (data) {
+        				 $scope.salesData = data;
+        				 console.log($scope.salesData);
+        				 $scope.gridOptions1.data = data.data.records;
+              })
+                  .catch(function () {
+                      $scope.error = 'data not fount';
+                  });
+        };
 
         $scope.refresh();
 
@@ -54,7 +72,7 @@
             { field: 'name', displayName: 'Name', cellTemplate: '<div class="ui-grid-cell-contents clickable" ng-click="grid.appScope.accountsDetails(row.entity.id)" >{{ row.entity.name}}</div>', },
             { field: 'category', displayName: 'Category' },
             { field: 'owner', displayName: 'Owner' },
-            { field: 'created_on', displayName: 'Created Oon' },
+            { field: 'created_on', displayName: 'Created on' },
             { field: 'updated_by', displayName: 'Updated By' },
             { field: 'updated_on', displayName: 'Updated On' },
             { field: 'status', displayName: 'Status' },
@@ -149,6 +167,7 @@
         }
         $scope.groupSelected = function (group) {
             $scope.groupSort = group;
+ $scope.anotherRefresh(group);
         }
 
         $scope.animationsEnabled = true;

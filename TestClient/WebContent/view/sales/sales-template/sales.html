@@ -11,7 +11,7 @@
         
          <img src="images/submenu_arrow.png" class="arrow">
          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-           <li role="menuitem" ng-repeat="group in salesData.data.fields" ng-show="group.is_group_by">
+              <li role="menuitem" ng-repeat="group in menuData" ng-show="true">
             <a href="javascript:void(0)" ng-click="groupSelected(group)">
                   {{group.label}}
             </a>
@@ -20,19 +20,10 @@
          </ul>
        </div>
 
-         <div class="btn-group" uib-dropdown>
-            <div style="color: white;"  class="btn btn-link bnt-title" uib-dropdown-toggle>
-               All ({{salesData.data.fields.length}}) 
-            </div>
-         </div>
-          <div class="btn-group" uib-dropdown>
+       <div  class="btn-group" uib-dropdown data-ng-repeat="group in salesData.data.group_by | orderBy:'$index':true">
             <div style="color: white;" class="btn btn-link bnt-title" uib-dropdown-toggle>
-               Newsletter ({{salesData.data.fields.length}}) 
-            </div>
-         </div>
-         <div class="btn-group" uib-dropdown>
-            <div style="color: white;" class="btn btn-link bnt-title" uib-dropdown-toggle>
-               Empty ({{salesData.data.fields.length}}) 
+             {{group.label=='' ? 'Empty' : group.label}}
+             ({{group.record_count}}) 
             </div>
          </div>
       </div>
