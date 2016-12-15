@@ -13,6 +13,32 @@
     angular.module('soffrontApp').run(function($rootScope, $state) {
         $rootScope.$on('$stateChangeError', console.log.bind(console));
         $rootScope.$state = $state;
+        $rootScope.tabs = [
+                           {
+                               title: 'Home',
+                               url: 'view/home/home.html'
+                           }, 
+                           /*{
+                               title: 'Sales Template',
+                               url: 'view/sales/sales-template/sales.html'
+                           }, */
+                           // {
+                           //     title: 'Edit Template',
+                           //     url: 'sales/sales-template/editSalesTemplate.html'
+                           // },
+                           // {
+                           //     title: 'create Sales Template',
+                           //     url: 'sales/sales-template/addSalesTemplate.html'
+                           // },
+                           // {
+                           //     title: 'Calendar /Tasks',
+                           //     url: 'sales/calendar/calendarModuleView.html'
+                           // }
+                           // {
+                           //     title: 'Accounts',
+                           //     url: 'view/sales/accounts/account.html'
+                           // } 
+                       ];
     })
 
  })();

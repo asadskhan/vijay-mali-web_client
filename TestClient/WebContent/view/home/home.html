@@ -2,8 +2,8 @@
     <div id="ts_tabmenu" style="background: url(images/header_top2.png) repeat-x left bottom #fff; height: 33px;">
         <ul  class="ui-sortable">
             <li ng-repeat="tab in tabs" ng-class="{active:isActiveTab(tab.url)}"> 
-                <a  ng-click="onClickTab(tab)" href="javascript:void(0)">  {{tab.title}} </a>
-                <span class="close-tab" ng-click="removeTab($index)" >x</span>
+                <a ng-click="onClickTab(tab)" href="javascript:void(0)">  {{tab.title}} </a>
+                 <span ng-if="tab.title!='Home'" class="close-tab" ng-click="removeTab($index)" >x</span>
             </li>
         </ul>
     </div>
