@@ -72,7 +72,7 @@
             $scope.accountsDetails = function (id) {
                 // alert(id);
                 // view/sales/sales-template
-                $rootScope.currentTab = 'view/sales/sales-template/editSalesTamplate.html';
+                $rootScope.currentTab = 'view/sales/sales-template/creatingtemplates.html';
             };
 
 
