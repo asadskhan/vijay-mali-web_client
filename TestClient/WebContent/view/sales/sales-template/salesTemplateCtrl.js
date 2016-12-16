@@ -13,7 +13,7 @@
 
     angular.module('salesTemplate').controller('salesTemplatesCtrl', salesTemplatesCtrl);
 
-    function salesTemplatesCtrl($scope, $uibModal, uiGridConstants, salesDataServices, $rootScope) {
+    function salesTemplatesCtrl($scope, $uibModal, uiGridConstants, salesDataServices, $rootScope, $state) {
 
 
         $scope.refresh = function () {
@@ -42,6 +42,16 @@
                       $scope.error = 'data not fount';
                   });
         };
+        
+     // view template according to vikash sir.
+        $scope.clickEvent= function(templateName){
+        if(templateName==="creatingtemplates"){
+        	$state.go('creatingtemplates');
+        }else if(templateName==="create_marketing_template_preview_Banner_Promotion_Multiple_Column"){
+        	$state.go('create_marketing_template_preview_Banner_Promotion_Multiple_Column');
+        }
+         
+        }
         
         $scope.filterByFieldName = function (fieldName,condition)
         {

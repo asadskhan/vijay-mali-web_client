@@ -42,6 +42,10 @@
             url: '/sales/calendar/pendingTask',
             templateUrl: 'view/sales/calendar/pendingTask.html',
             controller: 'calendarCtrl'
+        }).state('creatingtemplates', {
+            url: '/sales/sales-template/creatingtemplates',
+            templateUrl: 'view/sales/sales-template/creatingtemplates.html',
+            controller: 'salesTemplateCtrl'
         });
 
           
