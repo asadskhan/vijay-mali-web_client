@@ -9,10 +9,10 @@
                 </li> -->
 
                 </li>               
-                <li><a href="javascript:void(0)">Web Forms</a>
+                <li  ng-class="{active:isActiveTab({ url:'view/Webforms/webform.html'})}" ng-click="onClickTab({ url:'view/Webforms/webform.html'}); addTab({title: 'WebForms', url: 'view/Webforms/webform.html'} )"><a href="javascript:void(0)">Web Forms</a>
                 </li>
                 <li  ng-class="{active:isActiveTab({ url:'view/sales/accounts/account.html'})}" ng-click="onClickTab({ url:'view/sales/accounts/account.html'}); addTab({title: 'Contacts', url: 'view/sales/accounts/account.html'} )"><a href="javascript:void(0)">Contacts</a>
-                </li>
+                </li> 
                 <li><a href="javascript:void(0)">Automation Designer </a>
                 </li>
                 <li><a href="javascript:void(0)">Broadcast Campaigns </a>
