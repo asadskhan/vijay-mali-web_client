@@ -54,15 +54,13 @@
 <div id="inside_page_content2" style="margin-top: 30px; margin-right: 1%">
   <div class="icon_area">
 			
-		    <span id="addIcon" onclick="addNewItem()" style="margin-right: 8px; cursor: pointer;">
-		    	<img src="images/icon_add.png" width="16" height="16" border="0" title="Add" style="margin-right:3px; vertical-align:top;">
-		    	<span id="addIconText">Add</span>
-		    </span>
+		    <span class="add-icon" ng-class="{active:isActiveTab({ url:'view/Webforms/create_web_forms.html'})}"   ng-click="onClickTab({ url:'view/Webforms/create_web_forms.html'}); addTab({title: 'Create Web Forms', url: 'view/Webforms/create_web_forms.html'} )">
+            <img src="images/icon_add.png" />Add
+            </span>
           
-			<span onclick="refreshManagerPage();" style="margin-right: 8px; cursor: pointer;">
-	   			<img alt="Refresh" src="images/icon_refresh_g.png" width="16" height="16" title="Refresh" border="0" style="margin-right:3px; vertical-align:top;">
-	   			Refresh
-	   		</span>
+            <span class="refresh-icon" ng-click="refresh();" style="margin-left: 11px;">
+            <img src="images/icon_refresh_g.png" />Refresh
+            </span>
 	</div>
 	<div id="name">
 				<div width="15%" align="right" class="top_text3" style="padding-right:5px; font-weight: bold;" id="objectValueStr1">&nbsp;Name</div>
