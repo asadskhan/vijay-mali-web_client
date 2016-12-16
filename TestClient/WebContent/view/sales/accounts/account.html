@@ -19,7 +19,7 @@
                                        <tr>
                                           <td>
                                              <div style="float:left;"><a href="javascript:void(0)" onclick="javascript:openLink(this);">My Filters</a>&nbsp;&nbsp;
-                                                <button class="addIcon" onclick="addFilter()" >Add</button>
+                                                <button class="addIcon click" onclick="addFilter()" >Add</button>
                                              </div>
                                              <div class="gmail-buttons" style="float:right;">
                                                 <a id="My_FiltersPrevious" href="javascript:void(0)" onclick="javascript:previous(My_FiltersTable,My_FiltersPrevious,My_FiltersNext);" style="text-decoration: none; outline: none; padding-right: 5px; display: none;">
@@ -129,8 +129,8 @@
             <img src="images/icon_refresh_g.png" />Refresh
             </span>
 
-            <span class="customizeViewImg" ng-click="setupAccountsTemplate();">
-            <img src="images/icon_customize.png" />Setup
+            <span class="customizeViewImg">
+            <img src="images/icon_customize.png" data-toggle="modal" data-target="#myModal1"/>Setup
             </span>
 
             <div class="h-search" ng-init="columnSort= {label:'First Name'}" >
@@ -239,3 +239,96 @@
       </div>
    </div>
 </div>
+<!--start on 13 December mansi-->
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content" style="height: auto;width:auto;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Select the columns for this view</h4>
+        </div>
+        <div class="modal-body md_body">
+          <div id="details">
+            Add and reorder Contacts fields: (Click this box to add more fields. Drag and reorder the fields to change their position.)
+          </div>
+          <div class="chosen-container chosen-container-multi chosen-with-drop chosen-container-active" style="width: 100%;" title="" id="selectedField_chosen"><ul id="selectedField_ul" class="chosen-choices ui-sortable" style="min-height: 29px;">
+          <li class="search-choice" id="lead_score1"><span>Lead Score</span><a class="search-choice-close" data-option-array-index="0"></a></li>
+          <li class="search-choice" id="first_name1"><span>First Name</span><a class="search-choice-close" data-option-array-index="1"></a></li>
+          <li class="search-choice" id="email1"><span>Email</span><a class="search-choice-close" data-option-array-index="3"></a></li>
+          <li class="search-choice" id="phone1"><span>Phone</span><a class="search-choice-close" data-option-array-index="4"></a></li>
+          <li class="search-choice" id="email_status1"><span>Email Status</span><a class="search-choice-close" data-option-array-index="5"></a></li>
+          <li class="search-choice" id="state1"><span>State</span><a class="search-choice-close" data-option-array-index="6"></a></li>
+          <li class="search-choice" id="source1"><span>Source</span><a class="search-choice-close" data-option-array-index="7"></a></li>
+          <li class="search-choice" id="company1"><span>Company</span><a class="search-choice-close" data-option-array-index="8"></a></li>
+          <li class="search-choice" id="status1"><span>Status</span><a class="search-choice-close" data-option-array-index="9"></a></li>
+          </ul>
+          </div>
+          <div>
+            Sort by:&nbsp;
+            <select id="sortBy" name="sortBy" class="listmenuWhite" style="width: 100px;">
+             <option value="lead_score" selected="selected">Lead Score</option>
+             <option value="first_name">First name</option>
+             <option value="email">Email</option>
+             <option value="phone">Phone</option>
+             <option value="email_status">Email status</option>
+             <option value="state">State</option><option value="3242">Source</option><option value="146">Company</option><option value="3723">Status</option>
+             </select>&nbsp;&nbsp;
+             <input type="checkbox" id="ascending" name="ascending">
+             Descending&nbsp;&nbsp;
+             <input type="checkbox" id="showPic" name="showPic">
+             Show Picture
+          </div>
+          <div>
+            <strong>Related Table 1:</strong>&nbsp;
+            <select id="linkedTables1" name="linkedTables1" class="listmenuWhite" style="width: 100px;">
+            <option value=notes selected="selected">Notes</option>
+            <option value="accounts">Accounts</option>
+            <option value="opportunities">Opportunities</option>
+            <option value="cases">Cases</option>
+            <option value="broadcast_campaigns">Broadcast Campaigns</option>
+            <option value="group">Groups</option>
+            <option value="appointments">Appointments</option>
+            <option value="task">Tasks</option>
+            <option value="NONE">&lt;None&gt;</option>
+            </select>
+          </div>
+          <div class="chosen-container chosen-container-multi chosen-with-drop chosen-container-active" style="width: 100%;margin-top: 5px;" title="" id="selectedLinkFields1_chosen">
+           <ul id="selectedLinkFields1_ul" class="chosen-choices ui-sortable" style="min-height: 29px;">
+           <li class="search-choice" id="text1"><span>Text</span><a class="search-choice-close" data-option-array-index="0"></a></li>
+           </ul>
+          </div>
+          <div>
+            <strong>Related Table 2:</strong>&nbsp;
+            <select id="linkedTables2" name="linkedTables2" class="listmenuWhite" style="width: 100px;">
+            <option value="notes">Notes</option>
+            <option value="accounts">Accounts</option>
+            <option value="opportunities">Opportunities</option>
+            <option value="cases">Cases</option>
+            <option value="broadcast_campaigns">Broadcast Campaigns</option>
+            <option value="group">Groups</option>
+            <option value="appointments">Appointments</option>
+            <option value="task">Tasks</option>
+            <option value="NONE" selected="selected">&lt;None&gt;</option></select>
+          </div>
+          <div class="chosen-container chosen-container-multi chosen-with-drop chosen-container-active" style="width: 100%;margin-top:5px;" title="" id="selectedLinkFields2_chosen">
+          <ul id="selectedLinkFields2_ul" class="chosen-choices ui-sortable" style="min-height: 29px;">
+          <li class="search-field">
+          <input type="text" value="Click here to start..." class="default" autocomplete="off" style="width: 137px;">
+          </li>
+          </ul>
+          </div>
+          <div id="btn1">
+          <div>
+                  <input type="button" name="" value="Save" class="btn_bg2">
+          </div>
+          <div>              
+                  <input type="button" name="" value="Cancel" class="btn_bg3">
+          </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+         
+        </div>
+      </div>
+   </div>
+<!--ends on 13 December mansi-->
