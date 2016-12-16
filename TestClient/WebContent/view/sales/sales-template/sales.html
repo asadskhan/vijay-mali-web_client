@@ -4,16 +4,16 @@
        
        <!-- Split button -->
        <div class="btn-group" uib-dropdown>
-         <span class="title dropdown-img" uib-dropdown-toggle title="All" ng-init="groupSort= {label:'Category'}">
+         <span class="title dropdown-img" uib-dropdown-toggle title="All" ng-init="groupSort= {label:'Category',name:'category'}">
                {{groupSort.label}}  
                 <img src="images/arrow_open_orange.png" valign="middle" class="dropdown-img" >
          </span>
         
          <img src="images/submenu_arrow.png" class="arrow">
          <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="split-button">
-              <li role="menuitem" ng-repeat="group in menuData" ng-show="true">
-            <a href="javascript:void(0)" ng-click="groupSelected(group)">
-                  {{group.label}}
+              <li role="menuitem" ng-repeat="menu in menuData" ng-show="true">
+            <a href="javascript:void(0)" ng-click="groupSelected(menu)">
+                  {{menu.label}}
             </a>
            </li>
            
@@ -21,7 +21,9 @@
        </div>
 
        <div  class="btn-group" uib-dropdown data-ng-repeat="group in salesData.data.group_by | orderBy:'$index':true">
-            <div style="color: white;" class="btn btn-link bnt-title" uib-dropdown-toggle>
+       
+       		<!-- todo call the function filterByFieldName    -->
+            <div style="color: white;" class="btn btn-link bnt-title" uib-dropdown-toggle ng-click="filterByFieldName(groupSort.name,group.label)">
              {{group.label=='' ? 'Empty' : group.label}}
              ({{group.record_count}}) 
             </div>

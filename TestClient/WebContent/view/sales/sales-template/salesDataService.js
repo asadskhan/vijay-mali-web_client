@@ -28,11 +28,14 @@
 
       
         /*marketing template list view api call with parameter start*/
+       
+        //group_by_field_name when we change the category,owner or status
         obj.getListViewByFieldName = function(fieldName){
+        	console.log("fieldname"+fieldName.name+" "+fieldName.label)
        	var dataField = $httpParamSerializer(
         			{
         				input_param:{
-        					"group_by_field_name": fieldName.label
+        					"group_by_field_name": fieldName.name
         				}
         			}
         			);
@@ -45,6 +48,31 @@
               });          
               return deferred.promise;
           }
+        
+        //group by condition such as when we click on the category then Newsteller (group_by_condition)
+        obj.getListViewByCondition = function(groupByCondition)
+        {
+        	var dataField = $httpParamSerializer(
+        		{
+        			input_param:{
+        				'group_by_field_name' : groupByCondition.menu,
+        				'group_by_condition' : groupByCondition.condition 
+        			}
+        		}	
+        	);
+        	
+        	console.log("dataFields ="+dataField);
+        	
+            var deferred = $q.defer();
+            $http.get(config.apiMarketinTemplate +"get/listview?"+dataField,configHeader).success(function(data) {
+                deferred.resolve(data);
+              })
+              .error(function() {
+                deferred.reject();
+              });          
+              return deferred.promise;
+        }
+        
         
     /*    parameter call end here*/
         

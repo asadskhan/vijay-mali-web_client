@@ -20,9 +20,9 @@
             salesDataServices.getSalesDetails().then(function (data) {
             	 //menu items
             	$scope.menuData=[
-            	               {label:'category'},
-            	               {label:'owner'},
-            	               {label:'status'}
+            	               {label:'Category',name:'category'},
+            	               {label:'Owner',name:'owner'},
+            	               {label:'Status',name:'status'}
             	];
                 $scope.salesData = data;
                 $scope.gridOptions1.data = data.data.records;
@@ -36,12 +36,27 @@
         			
         			salesDataServices.getListViewByFieldName(group).then(function (data) {
         				 $scope.salesData = data;
-        				 console.log($scope.salesData);
         				 $scope.gridOptions1.data = data.data.records;
               })
                   .catch(function () {
                       $scope.error = 'data not fount';
                   });
+        };
+        
+        $scope.filterByFieldName = function (fieldName,condition)
+        {
+        	
+        	var groupByCondition = {
+        			menu : fieldName,
+        			condition : condition
+        	};
+        	
+        	console.log(groupByCondition);
+        	salesDataServices.getListViewByCondition(groupByCondition).then(function (data){
+        		$scope.gridOptions1.data = data.data.records;
+        	}).catch(function (){
+        		$scope.error = 'data not found';
+        	});
         };
 
         $scope.refresh();
@@ -165,11 +180,12 @@
         $scope.colnameSelected = function (colname) {
             $scope.columnSort = colname;
         }
+        	
         $scope.groupSelected = function (group) {
             $scope.groupSort = group;
- $scope.anotherRefresh(group);
+            $scope.anotherRefresh(group);
         }
-
+        
         $scope.animationsEnabled = true;
 
 
