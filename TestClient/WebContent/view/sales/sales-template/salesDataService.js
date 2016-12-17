@@ -10,7 +10,9 @@
 
         var configHeader = {
           headers: {
-              		Authentication: JSON.stringify($sessionStorage.SessionToken)
+              		Authentication: JSON.stringify($sessionStorage.SessionToken),
+              		'Content-Type' : 'application/x-www-form-urlencoded',
+              		'dataType' : 'jsonp'
           		}
         }
 
@@ -31,7 +33,6 @@
        
         //group_by_field_name when we change the category,owner or status
         obj.getListViewByFieldName = function(fieldName){
-        	console.log("fieldname"+fieldName.name+" "+fieldName.label)
        	var dataField = $httpParamSerializer(
         			{
         				input_param:{
@@ -107,9 +108,29 @@
             return deferred.promise;
 
         }
-
-
+        
+/*For deleteing marketing template - to delete row of table*/
+        
+        obj.deleteMarketTemplate= function(row){
+        	console.log(row);
+        	var dataField = $httpParamSerializer(
+            		{
+            			input_param:{
+            				'id' :row
+            			}
+            		}	
+            	);
+        	var deferred = $q.defer();
+        	$http.post(config.apiMarketinTemplate +"delete",dataField,configHeader).success(function(row){
+             deferred.resolve(row);        		
+        	})
+        	.error(function(){
+        		deferred.reject();
+        	});
+        	return deferred.promise;
+        	
+        }
         return obj; 
      }    
-
+      
  })();

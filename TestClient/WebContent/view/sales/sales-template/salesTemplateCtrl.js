@@ -9,6 +9,7 @@
 
 (function () {
 
+	var rowData = [];
     'use strict';
 
     angular.module('salesTemplate').controller('salesTemplatesCtrl', salesTemplatesCtrl);
@@ -31,6 +32,29 @@
                     $scope.error = 'data not fount';
                 });
         }
+        
+        
+        /*delete market template code - to delete row of table*/
+        $scope.deleteMarketTemplate = function(){
+        	var arr=[];
+        	
+        	console.log("before for loop"+rowData.length);
+        	
+        	for(var i=0;i<rowData.length;i++)
+        		{
+        			console.log(" i"+i+"  "+rowData[i].entity.id)
+        			arr.push(rowData[i].entity.id);
+        		}
+        	 rowData.splice(0);
+            console.log("after for loop"+rowData.length);
+        	salesDataServices.deleteMarketTemplate(arr).then(function(data){
+        			$scope.refresh();
+        	})
+        	 .catch(function () {
+                 $scope.error = 'data not fount';
+             });
+        }
+        
  $scope.anotherRefresh = function (group)
         {
         			
@@ -127,11 +151,14 @@
                 if (row.isSelected == true) {
                     console.log('this row is selected', row);
                     $scope.selectedRows.push(row);
+                    rowData.push(row);
                     //  console.log($scope.selectedRows);
                 } else {
                     var index = $scope.selectedRows.indexOf(row);
-                    console.log(index)
                     $scope.selectedRows.splice(index, 1);
+                    console.log("before slice"+rowData);
+                    rowData.splice(index,1);
+                    console.log("splice rowData else"+rowData);
                     $scope.singleSelect = false;
                     console.log('this row is unselected', row);
                     //  console.log($scope.selectedRows);
