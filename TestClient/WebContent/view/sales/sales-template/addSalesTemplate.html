@@ -94,8 +94,9 @@
 	<div class="prive-sty">
        <div class="etText">Auto Response Sample</div>
 	   	    <div id="parent" class="tonDiv">
-                <div id="hover-content" ">
-                 <button ng-click="clickEvent('creatingtemplates')" id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</button></a>
+                <div id="hover-content">
+                <a href="" ng-class="{active:isActiveTab({ url:'view/sales/sales-template/creatingtemplates.html'})}" style="text-decoration: none;"><button ng-click="onClickTab({ url:'view/sales/sales-template/creatingtemplates.html'}); addTab({title: 'Create Marketing Template', url: 'view/sales/sales-template/creatingtemplates.html'} )" id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;">Use this design</a>
+                 <!-- <button  id="btnSelect" value="377" category="Newsletter" class="small_new" style="width: 117px; margin-bottom: 20px;"  ng-class="{active:isActiveTab({ url:'view\sales\sales-template\creatingtemplates.html'})}" ng-click="onClickTab({ url:'view\sales\sales-template\creatingtemplates.html'}); addTab({title: 'create marketing Template', url: 'view\sales\sales-template\creatingtemplates.html'} )">Use this design</button> -->
                   <a href="view/sales/sales-template/previewSalesTemplate.html" target="_blank" style="text-decoration: none;"><button id="btnPreview" value="377" class="small_btn_new" style="width: 117px;">
 			      <span class="ctn_img"> </span>Preview</button></a>
                 </div>
